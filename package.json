@@ -1,12 +1,12 @@
 {
-  "name": "bs-file",
+  "name": "reason-file-demo",
   "version": "0.1.0",
   "scripts": {
     "build": "bsb -make-world",
     "clean": "bsb -clean-world",
     "start": "BS_WATCH_CLEAR=true bsb -make-world -w",
-    "watch": "webpack --watch",
-    "serve": "npx webpack serve --config ./webpack.config.js",
+    "webpack": "webpack -w",
+    "serve": "webpack serve",
     "open": "serve build/",
     "webpack:production": "NODE_ENV=production webpack"
   },
@@ -15,9 +15,9 @@
   "license": "MIT",
   "devDependencies": {
     "bs-platform": "^9.0.2",
-    "terser-webpack-plugin": "^5.1.1",
     "webpack": "^5.36.2",
     "webpack-cli": "^4.7.0",
+    "html-webpack-plugin": "5.3.1",
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {

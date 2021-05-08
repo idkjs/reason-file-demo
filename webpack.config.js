@@ -1,34 +1,27 @@
-const path = require('path');
-const webpack = require('webpack');
-const TerserPlugin = require('terser-webpack-plugin');
-const isProd = process.env.NODE_ENV === 'production';
-const buildPath = path.join(__dirname, 'build');
+const path = require("path");
+const webpack = require("webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const outputDir = path.join(__dirname, "dist/");
 
-// module.exports = {
-//   entry: {
-//     index: './lib/es6/src/Index.bs.js'
-//   },
-//   mode: isProd ? 'production' : 'development',
-//   output: {
-//     path: buildPath,
-//     filename: '[name].js'
-//   }
-// }
+const isProd = process.env.NODE_ENV === "production";
+
 module.exports = {
-  mode: 'development',
-  entry: {
-    index: path.join(__dirname, 'src', 'Index.bs.js')
-  },
+  mode: isProd ? "production" : "development",
   output: {
-    path: buildPath,
-    filename: '[name].js'
-  }
-  // reso
-  // entry: {
-  //   main: './lib/es6/src/Index.bs.js',
-  // },
-  // output: {
-  //   path: path.join(__dirname, "bundledOutputs"),
-  //   filename: '[name].js',
-  // },
+    path: outputDir,
+    filename: "index.[fullhash].js",
+    publicPath: "/",
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "public/index.html",
+    }),
+  ],
+  devServer: {
+    compress: true,
+    contentBase: outputDir,
+    port: process.env.PORT || 8000,
+    historyApiFallback: true,
+    stats: "minimal",
+  },
 };

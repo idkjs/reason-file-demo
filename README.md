@@ -4,13 +4,13 @@ Hello! This project allows you to quickly get started with Reason and BuckleScri
 
 # Build
 ```
-npm run build
+npm run webpack
 ```
 
 # Build + Watch
 
 ```
-npm run start
+npm run serve
 ```
 
 
