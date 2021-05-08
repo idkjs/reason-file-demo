@@ -1,4 +1,4 @@
-# Basic Reason Template
+# reason-formdata-demo
 
 Hello! This project allows you to quickly get started with Reason and BuckleScript. If you wanted a more sophisticated version, try the `react` template (`bsb -theme react -init .`).
 
@@ -16,3 +16,10 @@ npm run start
 
 # Editor
 If you use `vscode`, Press `Windows + Shift + B` it will build automatically
+
+# Todo
+Webpack is not opening build....
+
+# Source
+
+https://github.com/iwilsonq/bs-file-demo
