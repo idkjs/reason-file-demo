@@ -17,9 +17,6 @@ npm run serve
 # Editor
 If you use `vscode`, Press `Windows + Shift + B` it will build automatically
 
-# Todo
-Webpack is not opening build....
-
 # Source
 
 https://github.com/iwilsonq/bs-file-demo
