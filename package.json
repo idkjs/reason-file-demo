@@ -1,0 +1,29 @@
+{
+  "name": "bs-file",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "bsb -make-world",
+    "clean": "bsb -clean-world",
+    "start": "BS_WATCH_CLEAR=true bsb -make-world -w",
+    "watch": "webpack --watch",
+    "serve": "npx webpack serve --config ./webpack.config.js",
+    "open": "serve build/",
+    "webpack:production": "NODE_ENV=production webpack"
+  },
+  "keywords": [ "BuckleScript" ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "bs-platform": "^9.0.2",
+    "terser-webpack-plugin": "^5.1.1",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "bs-fetch": "^0.6.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "reason-react": "^0.9.1"
+  }
+}
